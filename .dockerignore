@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+yarn-error.log
+coverage
+__tests__
+.husky
+.next
+jest.cofig.ts
+.git
+.gitignore
+README.md
+.env
