@@ -10,6 +10,7 @@ const config: Config = {
     "@hooks/(.*)": "<rootDir>/src/hooks/$1",
     "@contexts/(.*)": "<rootDir>/src/contexts/$1",
     "@utils": "<rootDir>/src/utils",
+    "@enums": "<rootDir>/src/enums",
     "@test-utils": "<rootDir>/__tests__/test.utils.tsx",
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
     "next/font/(.*)": require.resolve(

@@ -26,6 +26,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@utils": ["./src/utils"],
+      "@enums": ["./src/enums"],
       "@test-utils": ["./__tests__/test.utils.tsx"]
     }
   },
