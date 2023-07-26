@@ -1,6 +1,8 @@
 import ThemeRegistry from "@components/ThemeRegistry/ThemeRegistry";
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@components/Header/Header";
+import Main from "@components/Main/Main";
 
 const metadata: Metadata = {
   title: "Bia challenge",
@@ -13,7 +15,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <link rel="icon" href="/favicon.ico" sizes="32x32" />
     </head>
     <body>
-      <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
+      <ThemeRegistry options={{ key: "mui" }}>
+        <Header />
+        <Main>{children}</Main>
+      </ThemeRegistry>
     </body>
   </html>
 );

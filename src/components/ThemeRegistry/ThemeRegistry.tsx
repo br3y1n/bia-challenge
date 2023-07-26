@@ -1,8 +1,6 @@
 "use client";
+import ThemeModeProvider from "@contexts/ThemeModeContext/ThemeModeContext";
 import { CacheProvider } from "@emotion/react";
-import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider } from "@mui/material/styles";
-import themeLight from "@themes/light";
 import IThemeRegistryProps from "./ThemeRegistry.interfaces";
 import useThemeRegistryState from "./hooks/useThemeRegistryState";
 
@@ -11,10 +9,7 @@ const ThemeRegistry = (props: IThemeRegistryProps) => {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={themeLight}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
+      <ThemeModeProvider>{children}</ThemeModeProvider>
     </CacheProvider>
   );
 };

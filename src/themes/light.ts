@@ -4,13 +4,31 @@ import { nunitoSans } from "../assets/fonts";
 const themeLight = createTheme({
   typography: {
     fontFamily: nunitoSans.style.fontFamily,
+    h1: {
+      m: 0,
+      fontSize: "24px",
+      fontWeight: "800",
+      color: "#111517",
+    },
   },
   palette: {
     primary: {
-      main: "#000000",
+      main: "#111517",
     },
-    secondary: {
-      main: "#FFFFFF",
+    background: {
+      paper: "#fafafa",
+      default: "#ffffff",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          fontWeight: "600",
+          fontSize: "16px",
+        },
+      },
     },
   },
 });

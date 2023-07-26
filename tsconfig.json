@@ -23,6 +23,9 @@
       "@app/*": ["./src/app/*"],
       "@themes/*": ["./src/themes/*"],
       "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@utils": ["./src/utils"],
       "@test-utils": ["./__tests__/test.utils.tsx"]
     }
   },

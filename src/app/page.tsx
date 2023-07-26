@@ -1,7 +1,3 @@
-const Home = () => (
-  <main>
-    <h1>Bia challenge</h1>
-  </main>
-);
+const Home = () => <h1>Bia challenge</h1>;
 
 export default Home;

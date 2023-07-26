@@ -7,6 +7,9 @@ const config: Config = {
     "@app/(.*)": "<rootDir>/src/app/$1",
     "@themes/(.*)": "<rootDir>/src/themes/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",
+    "@hooks/(.*)": "<rootDir>/src/hooks/$1",
+    "@contexts/(.*)": "<rootDir>/src/contexts/$1",
+    "@utils": "<rootDir>/src/utils",
     "@test-utils": "<rootDir>/__tests__/test.utils.tsx",
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
     "next/font/(.*)": require.resolve(
