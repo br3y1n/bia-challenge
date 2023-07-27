@@ -35,18 +35,13 @@ const getCountry = async (id: string) => {
       ),
     );
 
-    console.log(borders);
-
     data.borders = borders.map(({ cca3, name }) => ({
       name: name.common,
       id: cca3,
     }));
 
-    console.log(data);
     return data;
-  } catch {
-    return [];
-  }
+  } catch {}
 };
 
 export { getData, getCountry };

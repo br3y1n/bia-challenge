@@ -16,6 +16,13 @@ const countryCardsStyles = createStyles({
     my: "45px",
     textAlign: "center",
   },
+  skeletons: {
+    width: "100%",
+    maxWidth: { xs: "320px", sm: "250px" },
+    mx: "auto",
+    height: "335px",
+    borderRadius: "8px",
+  },
 });
 
 export default countryCardsStyles;

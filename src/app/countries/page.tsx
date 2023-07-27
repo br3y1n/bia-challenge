@@ -7,11 +7,13 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Skeleton,
   TextField,
 } from "@mui/material";
 import useCountriesState from "./hooks/useCountriesState";
 import countriesPageStyles from "./page.styles";
 import CountryCards from "./components/CountryCards/CountryCards";
+import CountryCardsSkeleton from "./components/CountryCards/CountryCards.skeleton";
 
 const CountriesPage = () => {
   const {
@@ -25,6 +27,7 @@ const CountriesPage = () => {
     regions,
     onChangeRegion,
     region,
+    loading,
   } = useCountriesState();
 
   return (
@@ -72,7 +75,7 @@ const CountriesPage = () => {
         </FormControl>
       </Box>
 
-      <CountryCards cards={countries} />
+      {loading ? <CountryCardsSkeleton /> : <CountryCards cards={countries} />}
     </>
   );
 };

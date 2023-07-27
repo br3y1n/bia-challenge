@@ -62,6 +62,23 @@ const themeDark = createTheme(themeLight, {
         },
       },
     },
+    MuiPaginationItem: {
+      styleOverrides: {
+        text: {
+          color: "#ffffff",
+
+          "&.Mui-selected": {
+            backgroundColor: "#2b3945",
+            border: "1px solid #ffffff",
+            color: "#ffffff",
+          },
+
+          "&:hover": {
+            backgroundColor: "#2b3945",
+          },
+        },
+      },
+    },
   },
 });
 

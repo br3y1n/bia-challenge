@@ -119,6 +119,28 @@ const themeLight = createTheme({
         },
       },
     },
+    MuiPagination: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        text: {
+          color: "#111517",
+
+          "&.Mui-selected": {
+            backgroundColor: "#ffffff",
+            border: "1px solid #111517",
+            color: "#111517",
+            fontWeight: "600",
+          },
+        },
+      },
+    },
   },
 });
 

@@ -8,6 +8,7 @@ const useCountriesState = () => {
   const [active, setActive] = useState(false);
   const [countries, setCountries] = useState([]);
   const [region, setRegion] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const regions = countries.reduce((acc, { region }) => {
     if (!acc.includes(region)) acc.push(region);
@@ -33,6 +34,7 @@ const useCountriesState = () => {
   const getX = async (search: string) => {
     const data = await getData(search);
     setCountries(data);
+    setLoading(false);
   };
 
   const onChangeRegion = (event: SelectChangeEvent<string>) => {
@@ -43,6 +45,8 @@ const useCountriesState = () => {
     const delayDebounceFn = setTimeout(() => {
       getX(search);
     }, 500);
+
+    setLoading(true);
 
     return () => clearTimeout(delayDebounceFn);
   }, [search]);
@@ -70,6 +74,7 @@ const useCountriesState = () => {
     regions,
     region,
     onChangeRegion,
+    loading,
   };
 };
 
