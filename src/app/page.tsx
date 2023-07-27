@@ -3,7 +3,7 @@ import { RouteEnum } from "@enums";
 import { Box, Button, Typography, styled } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import homeStyles from "./page.styles";
+import homePageStyles from "./page.styles";
 
 const title = "Welcome to my Bia Challenge!";
 
@@ -14,9 +14,9 @@ const buttonText = "Continue";
 
 const ImageStyled = styled(Image)({});
 
-const Home = () => (
-  <Box sx={homeStyles.container}>
-    <Typography variant="h2" sx={homeStyles.title}>
+const HomePage = () => (
+  <Box sx={homePageStyles.container}>
+    <Typography variant="h2" sx={homePageStyles.title}>
       {title}
     </Typography>
 
@@ -26,19 +26,19 @@ const Home = () => (
       height={400}
       alt="Brayayin"
       priority
-      sx={homeStyles.image}
+      sx={homePageStyles.image}
     />
 
-    <Typography variant="body1" sx={homeStyles.description}>
+    <Typography variant="body1" sx={homePageStyles.description}>
       {description}
     </Typography>
 
     <Link href={RouteEnum.COUNTRIES} legacyBehavior>
-      <Button variant="outlined" sx={homeStyles.button}>
+      <Button variant="outlined" sx={homePageStyles.button}>
         {buttonText}
       </Button>
     </Link>
   </Box>
 );
 
-export default Home;
+export default HomePage;

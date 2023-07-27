@@ -33,6 +33,35 @@ const themeDark = createTheme(themeLight, {
         },
       },
     },
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          backgroundColor: "#2b3945",
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        shrink: {
+          color: "#ffffff",
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#2b3945",
+          color: "#ffffff",
+        },
+      },
+    },
+    MuiMenu: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#2b3945",
+        },
+      },
+    },
   },
 });
 

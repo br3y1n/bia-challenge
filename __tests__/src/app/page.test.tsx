@@ -1,4 +1,4 @@
-import Home from "@app/page";
+import HomePage from "@app/page";
 import { render, screen } from "@test-utils";
 import { HtmlProps } from "next/dist/shared/lib/html-context";
 
@@ -12,7 +12,7 @@ jest.mock(
 
 describe("Home tests:", () => {
   it("should be render home page", () => {
-    render(<Home />);
+    render(<HomePage />);
 
     const titleTxt = screen.getByRole("heading", {
       level: 2,

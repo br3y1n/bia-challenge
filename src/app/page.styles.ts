@@ -9,7 +9,7 @@ const myKeyframe = keyframes`
     100% { transform:   rotate(0deg)  }
 `;
 
-const homeStyles = createStyles({
+const homePageStyles = createStyles({
   container: {
     width: "100%",
     maxWidth: "700px",
@@ -36,4 +36,4 @@ const homeStyles = createStyles({
   },
 });
 
-export default homeStyles;
+export default homePageStyles;
