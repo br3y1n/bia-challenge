@@ -1,16 +1,17 @@
 "use client";
 import { SelectChangeEvent } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
-import { getData } from "../../../adapters/api/api";
+import { getCountriesByApi } from "@adapters/api/api";
+import ICountryPreviewEntity from "@entities/countryPreview.entity";
 
 const useCountriesState = () => {
   const [search, setSearch] = useState("");
   const [active, setActive] = useState(false);
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<ICountryPreviewEntity[]>([]);
   const [region, setRegion] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const regions = countries.reduce((acc, { region }) => {
+  const regions = countries.reduce<string[]>((acc, { region }) => {
     if (!acc.includes(region)) acc.push(region);
 
     return acc;
@@ -31,9 +32,8 @@ const useCountriesState = () => {
     setActive(false);
   };
 
-  const getX = async (search: string) => {
-    const data = await getData(search);
-    setCountries(data);
+  const getCountries = async (name: string) => {
+    setCountries(await getCountriesByApi(name));
     setLoading(false);
   };
 
@@ -43,7 +43,7 @@ const useCountriesState = () => {
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
-      getX(search);
+      getCountries(search);
     }, 500);
 
     setLoading(true);

@@ -2,8 +2,9 @@ import { Box, Pagination, Typography } from "@mui/material";
 import { ChangeEvent, FC, useEffect, useState } from "react";
 import CountryCard from "../CountryCard/CountryCard";
 import mediaCardsStyles from "./CountryCards.styles";
+import ICountryPreviewEntity from "@entities/countryPreview.entity";
 
-const CountryCards: FC<{ cards: any[] }> = ({ cards }) => {
+const CountryCards: FC<{ cards: ICountryPreviewEntity[] }> = ({ cards }) => {
   const length = cards.length;
   const hasCards = length > 0;
   const itemPerPage = 8;
@@ -25,14 +26,14 @@ const CountryCards: FC<{ cards: any[] }> = ({ cards }) => {
   return hasCards ? (
     <>
       <Box sx={mediaCardsStyles.container}>
-        {filteredCard.map((props: any, index) => (
+        {filteredCard.map((props, index) => (
           <CountryCard
             key={index}
-            image={props.flags.svg}
-            alt={props.flags.alt}
+            image={props.flag.src}
+            alt={props.flag.alt}
             name={props.name.common}
             officialName={props.name.official}
-            id={props.cca3}
+            id={props.id}
             population={props.population}
             region={props.region}
             capital={props.capital}

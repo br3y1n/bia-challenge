@@ -11,7 +11,7 @@ const CountryCard: FC<any> = (props) => {
   return (
     <Card sx={countryCardStyles.container}>
       <Box sx={countryCardStyles.imgRelation}>
-        <Link href={`${RouteEnum.COUNTRY}/${id}`}>
+        <Link href={`${RouteEnum.COUNTRY}/${id}`} legacyBehavior>
           <CardMedia
             component="img"
             image={image}

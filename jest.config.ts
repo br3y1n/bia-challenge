@@ -9,6 +9,8 @@ const config: Config = {
     "@components/(.*)": "<rootDir>/src/components/$1",
     "@hooks/(.*)": "<rootDir>/src/hooks/$1",
     "@contexts/(.*)": "<rootDir>/src/contexts/$1",
+    "@adapters/(.*)": "<rootDir>/src/adapters/$1",
+    "@entities/(.*)": "<rootDir>/src/entities/$1",
     "@utils": "<rootDir>/src/utils",
     "@enums": "<rootDir>/src/enums",
     "@test-utils": "<rootDir>/__tests__/test.utils.tsx",

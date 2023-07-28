@@ -77,7 +77,9 @@ cd bia-challenge
 yarn install
 ```
 
-4. For development, run:
+4. create .env file from .env.example
+
+5. For development, run:
 
 ```bash
 yarn dev
@@ -85,7 +87,7 @@ yarn dev
 
 The application will be available at http://localhost:3000.
 
-5. For production, first build the project, then run the application:
+6. For production, first build the project, then run the application:
 
 ```bash
 yarn build && yarn start

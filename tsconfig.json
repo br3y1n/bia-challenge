@@ -25,6 +25,8 @@
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@contexts/*": ["./src/contexts/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@adapters/*": ["./src/adapters/*"],
       "@utils": ["./src/utils"],
       "@enums": ["./src/enums"],
       "@test-utils": ["./__tests__/test.utils.tsx"]

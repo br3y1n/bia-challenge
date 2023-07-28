@@ -1,47 +1,84 @@
-const getData = async (name: string) => {
+import ICountryFullEntity from "@entities/countryFull.entity";
+import ICountryPreviewEntity from "@entities/countryPreview.entity";
+import { IApiCountry, IFetcher } from "./api.interfaces";
+import { mapCountryPreview, mapCountryFull } from "./mappers";
+import { ApiRouteEnum } from "@enums";
+
+const fetcher: IFetcher = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) throw Error;
+
+  return await response.json();
+};
+
+const getCountriesUrl = (name: string) => {
+  const urlForName = `${process.env.NEXT_PUBLIC_API}${ApiRouteEnum.NAME}/${name}`;
+  const urlForAll = `${process.env.NEXT_PUBLIC_API}${ApiRouteEnum.ALL}`;
+
+  if (name === "") return urlForAll;
+
+  return urlForName;
+};
+
+const fieldsToBorders: (keyof IApiCountry)[] = ["name", "cca3"];
+
+const fieldsToPreview: (keyof IApiCountry)[] = [
+  ...fieldsToBorders,
+  "flags",
+  "region",
+  "capital",
+  "population",
+];
+
+const fieldsToFull: (keyof IApiCountry)[] = [
+  ...fieldsToPreview,
+  "subregion",
+  "tld",
+  "currencies",
+  "languages",
+  "borders",
+];
+
+const getCountriesByApi = async (
+  name: string,
+): Promise<ICountryPreviewEntity[]> => {
   try {
-    const fields = "?fields=name,flags,region,capital,population,cca3";
-    const url1 = "https://restcountries.com/v3.1/all";
-    const url2 = `https://restcountries.com/v3.1/name/${name}`;
-    const url = `${name === "" ? url1 : url2}${fields}`;
-    const response = await fetch(url);
+    const fields = fieldsToPreview.join(",");
+    const api = getCountriesUrl(name);
+    const url = `${api}?fields=${fields}`;
+    const apiCountries = await fetcher<IApiCountry[]>(url);
 
-    if (!response.ok) throw Error;
-
-    const data = await response.json();
-
-    return data;
+    return apiCountries.map(mapCountryPreview);
   } catch {
     return [];
   }
 };
 
-const getCountry = async (id: string) => {
+const getCountriesByIdsApi = async (
+  borderIds: string[],
+): Promise<Pick<IApiCountry, "cca3" | "name">[]> =>
+  await Promise.all(
+    borderIds.map((id: string) => {
+      const fields = fieldsToBorders.join(",");
+      const api = `${process.env.NEXT_PUBLIC_API}${ApiRouteEnum.ID}`;
+      const url = `${api}/${id}?fields=${fields}`;
+
+      return fetcher<Pick<IApiCountry, "cca3" | "name">>(url);
+    }),
+  );
+
+const getCountryByIdApi = async (
+  id: string,
+): Promise<ICountryFullEntity | undefined> => {
   try {
-    const fields =
-      "?fields=name,flags,region,capital,population,cca3,subregion,tld,currencies,languages,borders";
-    const url = `https://restcountries.com/v3.1/alpha/${id}${fields}`;
-    const response = await fetch(url);
+    const fields = fieldsToFull.join(",");
+    const api = `${process.env.NEXT_PUBLIC_API}${ApiRouteEnum.ID}`;
+    const url = `${api}/${id}?fields=${fields}`;
+    const apiCountry = await fetcher<IApiCountry>(url);
 
-    if (!response.ok) throw Error;
-
-    const data = await response.json();
-
-    const borders = await Promise.all(
-      data.borders.map((currentId: any) =>
-        fetch(
-          `https://restcountries.com/v3.1/alpha/${currentId}?fields=name,cca3`,
-        ).then((response) => response.json()),
-      ),
-    );
-
-    data.borders = borders.map(({ cca3, name }) => ({
-      name: name.common,
-      id: cca3,
-    }));
-
-    return data;
+    return mapCountryFull(apiCountry);
   } catch {}
 };
 
-export { getData, getCountry };
+export { getCountriesByApi, getCountryByIdApi, getCountriesByIdsApi };

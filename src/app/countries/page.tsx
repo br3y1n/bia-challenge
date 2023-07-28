@@ -56,10 +56,11 @@ const CountriesPage = () => {
         />
 
         <FormControl sx={countriesPageStyles.select}>
-          <InputLabel htmlFor="region">Filter by Region</InputLabel>
+          <InputLabel id="labelRegion">Filter by Region</InputLabel>
 
           <Select
             label="Filter by Region"
+            labelId="labelRegion"
             id="region"
             onChange={onChangeRegion}
             value={region}

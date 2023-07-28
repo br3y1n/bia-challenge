@@ -35,6 +35,7 @@ const countryCardStyles = createStyles({
     top: 0,
     left: 0,
     objectFit: "cover",
+    cursor: "pointer",
   },
   description: {
     overflow: "hidden",

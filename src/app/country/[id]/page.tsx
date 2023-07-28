@@ -1,27 +1,29 @@
 "use client";
+import { getCountryByIdApi } from "@adapters/api/api";
+import ICountryFullEntity from "@entities/countryFull.entity";
+import { RouteEnum } from "@enums";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Box, Button, Typography, styled } from "@mui/material";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getCountry } from "../../../adapters/api/api";
-import RouteEnum from "../../../enums/route.enum";
-import countryPageStyles from "./page.styles";
 import CountryPageSkeleton from "./page.skeleton";
+import countryPageStyles from "./page.styles";
 
 const ImgStyled = styled("img")({});
 
 const CountryPage = ({ params: { id } }: { params: { id: string } }) => {
-  const [country, setCountry] = useState<any>(undefined);
+  const [country, setCountry] = useState<ICountryFullEntity | undefined>(
+    undefined,
+  );
   const [loading, setLoading] = useState(true);
 
-  const getData = async (id: string) => {
-    const data = await getCountry(id);
-    setCountry(data);
+  const getCountry = async (id: string) => {
+    setCountry(await getCountryByIdApi(id));
     setLoading(false);
   };
 
   useEffect(() => {
-    getData(id);
+    getCountry(id);
   }, [id]);
 
   if (loading) return <CountryPageSkeleton />;
@@ -44,8 +46,8 @@ const CountryPage = ({ params: { id } }: { params: { id: string } }) => {
           <Box sx={countryPageStyles.imgContainer}>
             <Box sx={countryPageStyles.imgRelation}>
               <ImgStyled
-                src={country.flags.svg}
-                alt={country.flags.alt}
+                src={country.flag.src}
+                alt={country.flag.alt}
                 sx={countryPageStyles.img}
               />
             </Box>
@@ -59,8 +61,7 @@ const CountryPage = ({ params: { id } }: { params: { id: string } }) => {
             <Box sx={countryPageStyles.descriptionContainer}>
               <Box>
                 <Typography variant="body1" sx={countryPageStyles.description}>
-                  <b>Native Name:</b>{" "}
-                  {Object.values<any>(country.name.nativeName)[0].common}
+                  <b>Native Name:</b> {country.name.native}
                 </Typography>
 
                 <Typography variant="body1" sx={countryPageStyles.description}>
@@ -86,15 +87,11 @@ const CountryPage = ({ params: { id } }: { params: { id: string } }) => {
                 </Typography>
 
                 <Typography variant="body1" sx={countryPageStyles.description}>
-                  <b>Currencies:</b>{" "}
-                  {Object.values<any>(country.currencies)
-                    .map(({ name }) => name)
-                    .join(", ")}
+                  <b>Currencies:</b> {country.currencies.join(", ")}
                 </Typography>
 
                 <Typography variant="body1" sx={countryPageStyles.description}>
-                  <b>Languages:</b>{" "}
-                  {Object.values(country.languages).join(", ")}
+                  <b>Languages:</b> {country.languages.join(", ")}
                 </Typography>
               </Box>
             </Box>
@@ -106,7 +103,7 @@ const CountryPage = ({ params: { id } }: { params: { id: string } }) => {
 
               <Box>
                 {country.borders.length > 0 ? (
-                  country.borders.map(({ name, id }: any, index: number) => (
+                  country.borders.map(({ name, id }, index: number) => (
                     <Link
                       href={`${RouteEnum.COUNTRY}/${id}`}
                       legacyBehavior
