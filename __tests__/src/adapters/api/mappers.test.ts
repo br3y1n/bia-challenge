@@ -21,12 +21,12 @@ describe("api mappers tests:", () => {
   });
 
   it("When mapCountryPreview is called, then return a map data to preview", () => {
-    const previewData = mapCountryPreview(apiCountryTest);
+    const previewData = mapCountryPreview(apiCountryTest, "");
 
     expect(previewData).toEqual({
       name: {
         common: "colombia",
-        official: "colombia",
+        match: "colombia",
       },
       id: "COL",
       capital: "Bogota",

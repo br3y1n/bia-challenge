@@ -12,7 +12,7 @@ const render = (ui: ReactElement, renderOptions?: RenderOptions) => {
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
 };
 
-const getCountryResponse = () => ({
+const getCountryResponse = (): IApiCountry => ({
   borders: ["COL"],
   capital: ["Bogota"],
   cca3: "COL",
@@ -31,6 +31,7 @@ const getCountryResponse = () => ({
   region: "america",
   subregion: "norte",
   tld: [".bt"],
+  altSpellings: ["colombia"],
 });
 
 export * from "@testing-library/react";

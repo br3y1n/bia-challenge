@@ -32,7 +32,7 @@ const CountryCards: FC<{ cards: ICountryPreviewEntity[] }> = ({ cards }) => {
             image={props.flag.src}
             alt={props.flag.alt}
             name={props.name.common}
-            officialName={props.name.official}
+            matchName={props.name.match}
             id={props.id}
             population={props.population}
             region={props.region}

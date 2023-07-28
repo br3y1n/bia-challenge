@@ -21,6 +21,7 @@ interface IApiCountry {
   region: string;
   subregion: string;
   tld: string[];
+  altSpellings: string[];
 }
 
 export type { IFetcher, IApiCountry };

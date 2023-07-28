@@ -35,6 +35,12 @@ Pagination allows users to navigate the country list more fluidly and efficientl
 
 ![Pagination component](./images/pagination.jpeg)
 
+## 4. Changes in Country Card
+
+The country card component has been enhanced to display additional information when the country name filter is applied. When a user searches for a country, the card now shows the country name along with the matched name (either from "name" or "altSpelling") in parentheses. This provides transparency to users, indicating why certain countries are included in the filtered results.
+
+![Card component](./images/card.jpg)
+
 These implemented changes and filters were designed to provide users with an enhanced experience when searching and exploring country information while optimizing application efficiency and performance.
 
 # Requirements

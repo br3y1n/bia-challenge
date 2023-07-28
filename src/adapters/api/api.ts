@@ -29,6 +29,7 @@ const fieldsToPreview: (keyof IApiCountry)[] = [
   "region",
   "capital",
   "population",
+  "altSpellings",
 ];
 
 const fieldsToFull: (keyof IApiCountry)[] = [
@@ -49,7 +50,9 @@ const getCountriesByApi = async (
     const url = `${api}?fields=${fields}`;
     const apiCountries = await fetcher<IApiCountry[]>(url);
 
-    return apiCountries.map(mapCountryPreview);
+    return apiCountries.map((apiCountry) =>
+      mapCountryPreview(apiCountry, name),
+    );
   } catch {
     return [];
   }

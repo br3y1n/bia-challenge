@@ -4,10 +4,19 @@ import ICountryPreviewEntity from "@entities/countryPreview.entity";
 import { IApiCountry } from "./api.interfaces";
 import { getCountriesByIdsApi } from "./api";
 
-const mapCountryPreview = (apiCountry: IApiCountry): ICountryPreviewEntity => ({
+const mapCountryPreview = (
+  apiCountry: IApiCountry,
+  match: string,
+): ICountryPreviewEntity => ({
   name: {
     common: apiCountry.name.common,
-    official: apiCountry.name.official,
+    match: [
+      apiCountry.name.common,
+      apiCountry.name.official,
+      ...apiCountry.altSpellings,
+    ].find((currentMatch) =>
+      currentMatch.toLocaleLowerCase().includes(match.toLocaleLowerCase()),
+    )!,
   },
   id: apiCountry.cca3,
   capital: apiCountry.capital.join(", "),
