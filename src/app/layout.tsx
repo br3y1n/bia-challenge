@@ -1,7 +1,10 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
+import { Header } from "@components/Header";
+import { Main } from "@components/Main";
 import { QueryProvider } from "@providers/QueryProvider";
+import { ThemeModeProvider } from "@providers/ThemeModeProvider";
 import { resolvePath } from "@utils/resolve-path";
 
 import type { Metadata } from "next";
@@ -13,14 +16,19 @@ const metadata: Metadata = {
   description: "Frontend-React challenge for Bia by Brayayin",
 };
 
-const RootLayout = ({ children }: { children: ReactNode }) => (
+const RootLayout = ({ children }: PropsWithChildren) => (
   <html lang="en">
     <head>
       <link rel="icon" href={resolvePath("/favicon.ico")} sizes="32x32" />
     </head>
     <body>
       <AppRouterCacheProvider>
-        <QueryProvider>{children}</QueryProvider>
+        <ThemeModeProvider>
+          <QueryProvider>
+            <Header />
+            <Main>{children}</Main>
+          </QueryProvider>
+        </ThemeModeProvider>
       </AppRouterCacheProvider>
     </body>
   </html>
