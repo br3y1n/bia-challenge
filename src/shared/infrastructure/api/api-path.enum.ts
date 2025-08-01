@@ -1,5 +1,7 @@
 enum ApiPathEnum {
-  COUNTRIES = "/countries",
+  COUNTRIES = "/all",
+  COUNTRIES_BY_NAME = "/name",
+  COUNTRY = "/alpha",
 }
 
 export { ApiPathEnum };

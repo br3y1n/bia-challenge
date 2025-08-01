@@ -15,9 +15,14 @@ const useGoTo = () => {
     router.push(InternalRouteEnum.COUNTRIES);
   };
 
+  const goToCountry = (id: string) => {
+    router.push(`${InternalRouteEnum.COUNTRIES}/${id}`);
+  };
+
   return {
     goToCountries,
     goToHome,
+    goToCountry,
   };
 };
 

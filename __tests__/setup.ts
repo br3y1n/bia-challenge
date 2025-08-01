@@ -6,6 +6,7 @@ vi.mock("next/font/google", () => ({
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: pushMock }),
+  useParams: () => ({ id: "123" }),
 }));
 
 export { pushMock };

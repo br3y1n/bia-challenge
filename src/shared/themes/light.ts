@@ -62,6 +62,86 @@ const themeLight = createTheme({
         },
       },
     },
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          backgroundColor: "#ffffff",
+          boxShadow: "0px 0px 6px 0px #00000033",
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          boxShadow: "0px 0px 6px 0px #00000033",
+          borderColor: "transparent",
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          transform: "translate(14px, 18px) scale(1)",
+          fontSize: "14px",
+
+          "&.withAdorment": {
+            transform: "translate(70px, 18px) scale(1)",
+          },
+        },
+        shrink: {
+          transform: "translate(10px, -9px) scale(0.8)",
+          color: "#111517",
+          fontWeight: "600",
+          paddingLeft: "5px",
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#ffffff",
+          color: "#111517",
+        },
+      },
+    },
+    MuiMenu: {
+      styleOverrides: {
+        paper: {
+          marginTop: "5px",
+          backgroundColor: "#ffffff",
+        },
+      },
+    },
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: {
+          margin: "0px 12px",
+          pointerEvents: "none",
+        },
+      },
+    },
+    MuiPagination: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        text: {
+          color: "#111517",
+
+          "&.Mui-selected": {
+            backgroundColor: "#ffffff",
+            border: "1px solid #111517",
+            color: "#111517",
+            fontWeight: "600",
+          },
+        },
+      },
+    },
   },
 });
 

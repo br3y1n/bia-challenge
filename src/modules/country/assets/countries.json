@@ -1,0 +1,325 @@
+[
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/md.png",
+      "svg": "https://flagcdn.com/md.svg",
+      "alt": "The flag of Moldova is composed of three equal vertical bands of blue, yellow and red, with the national coat of arms centered in the yellow band."
+    },
+    "name": {
+      "common": "Moldova",
+      "official": "Republic of Moldova",
+      "nativeName": {
+        "ron": { "official": "Republica Moldova", "common": "Moldova" }
+      }
+    },
+    "cca3": "MDA",
+    "capital": ["Chișinău"],
+    "altSpellings": [
+      "MD",
+      "Moldova, Republic of",
+      "Republic of Moldova",
+      "Republica Moldova"
+    ],
+    "region": "Europe",
+    "population": 2617820
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/km.png",
+      "svg": "https://flagcdn.com/km.svg",
+      "alt": "The flag of Comoros is composed of four equal horizontal bands of yellow, white, red and blue, with a green isosceles triangle superimposed on the hoist side of the field. This triangle has its base on the hoist end, spans about two-fifth the width of the field and bears a fly-side facing white crescent and four five-pointed white stars arranged in a vertical line along the opening of the crescent."
+    },
+    "name": {
+      "common": "Comoros",
+      "official": "Union of the Comoros",
+      "nativeName": {
+        "ara": { "official": "الاتحاد القمري", "common": "القمر‎" },
+        "fra": { "official": "Union des Comores", "common": "Comores" },
+        "zdj": { "official": "Udzima wa Komori", "common": "Komori" }
+      }
+    },
+    "cca3": "COM",
+    "capital": ["Moroni"],
+    "altSpellings": [
+      "KM",
+      "Union of the Comoros",
+      "Union des Comores",
+      "Udzima wa Komori",
+      "al-Ittiḥād al-Qumurī"
+    ],
+    "region": "Africa",
+    "population": 869595
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/my.png",
+      "svg": "https://flagcdn.com/my.svg",
+      "alt": "The flag of Malaysia is composed of fourteen equal horizontal bands of red alternating with white. A blue rectangle, bearing a fly-side facing yellow crescent and a fourteen-pointed yellow star placed just outside the crescent opening, is superimposed in the canton."
+    },
+    "name": {
+      "common": "Malaysia",
+      "official": "Malaysia",
+      "nativeName": {
+        "eng": { "official": "Malaysia", "common": "Malaysia" },
+        "msa": { "official": "مليسيا", "common": "مليسيا" }
+      }
+    },
+    "cca3": "MYS",
+    "capital": ["Kuala Lumpur"],
+    "altSpellings": ["MY"],
+    "region": "Asia",
+    "population": 32365998
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/dz.png",
+      "svg": "https://flagcdn.com/dz.svg",
+      "alt": "The flag of Algeria features two equal vertical bands of green and white. A five-pointed red star within a fly-side facing red crescent is centered over the two-color boundary."
+    },
+    "name": {
+      "common": "Algeria",
+      "official": "People's Democratic Republic of Algeria",
+      "nativeName": {
+        "ara": {
+          "official": "الجمهورية الديمقراطية الشعبية الجزائرية",
+          "common": "الجزائر"
+        }
+      }
+    },
+    "cca3": "DZA",
+    "capital": ["Algiers"],
+    "altSpellings": ["DZ", "Dzayer", "Algérie"],
+    "region": "Africa",
+    "population": 44700000
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/nf.png",
+      "svg": "https://flagcdn.com/nf.svg",
+      "alt": ""
+    },
+    "name": {
+      "common": "Norfolk Island",
+      "official": "Territory of Norfolk Island",
+      "nativeName": {
+        "eng": {
+          "official": "Territory of Norfolk Island",
+          "common": "Norfolk Island"
+        },
+        "pih": {
+          "official": "Teratri of Norf'k Ailen",
+          "common": "Norf'k Ailen"
+        }
+      }
+    },
+    "cca3": "NFK",
+    "capital": ["Kingston"],
+    "altSpellings": [
+      "NF",
+      "Territory of Norfolk Island",
+      "Teratri of Norf'k Ailen"
+    ],
+    "region": "Oceania",
+    "population": 2302
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/si.png",
+      "svg": "https://flagcdn.com/si.svg",
+      "alt": "The flag of Slovenia is composed of three equal horizontal bands of white, blue and red. The national coat of arms is situated in the upper hoist side of the field centered on the boundary between the white and blue bands."
+    },
+    "name": {
+      "common": "Slovenia",
+      "official": "Republic of Slovenia",
+      "nativeName": {
+        "slv": { "official": "Republika Slovenija", "common": "Slovenija" }
+      }
+    },
+    "cca3": "SVN",
+    "capital": ["Ljubljana"],
+    "altSpellings": ["SI", "Republic of Slovenia", "Republika Slovenija"],
+    "region": "Europe",
+    "population": 2100126
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/gy.png",
+      "svg": "https://flagcdn.com/gy.svg",
+      "alt": "The flag of Guyana has a green field with two isosceles triangles which share a common base on the hoist end. The smaller black-edged red triangle spanning half the width of the field is superimposed on the larger white-edged yellow triangle which spans the full width of the field."
+    },
+    "name": {
+      "common": "Guyana",
+      "official": "Co-operative Republic of Guyana",
+      "nativeName": {
+        "eng": {
+          "official": "Co-operative Republic of Guyana",
+          "common": "Guyana"
+        }
+      }
+    },
+    "cca3": "GUY",
+    "capital": ["Georgetown"],
+    "altSpellings": ["GY", "Co-operative Republic of Guyana"],
+    "region": "Americas",
+    "population": 786559
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/gs.png",
+      "svg": "https://flagcdn.com/gs.svg",
+      "alt": ""
+    },
+    "name": {
+      "common": "South Georgia",
+      "official": "South Georgia and the South Sandwich Islands",
+      "nativeName": {
+        "eng": {
+          "official": "South Georgia and the South Sandwich Islands",
+          "common": "South Georgia"
+        }
+      }
+    },
+    "cca3": "SGS",
+    "capital": ["King Edward Point"],
+    "altSpellings": ["GS", "South Georgia and the South Sandwich Islands"],
+    "region": "Antarctic",
+    "population": 30
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/cx.png",
+      "svg": "https://flagcdn.com/cx.svg",
+      "alt": ""
+    },
+    "name": {
+      "common": "Christmas Island",
+      "official": "Territory of Christmas Island",
+      "nativeName": {
+        "eng": {
+          "official": "Territory of Christmas Island",
+          "common": "Christmas Island"
+        }
+      }
+    },
+    "cca3": "CXR",
+    "capital": ["Flying Fish Cove"],
+    "altSpellings": ["CX", "Territory of Christmas Island"],
+    "region": "Oceania",
+    "population": 2072
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/fr.png",
+      "svg": "https://flagcdn.com/fr.svg",
+      "alt": "The flag of France is composed of three equal vertical bands of blue, white and red."
+    },
+    "name": {
+      "common": "France",
+      "official": "French Republic",
+      "nativeName": {
+        "fra": { "official": "République française", "common": "France" }
+      }
+    },
+    "cca3": "FRA",
+    "capital": ["Paris"],
+    "altSpellings": ["FR", "French Republic", "République française"],
+    "region": "Europe",
+    "population": 67391582
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/dk.png",
+      "svg": "https://flagcdn.com/dk.svg",
+      "alt": "The flag of Denmark has a red field with a large white cross that extend to the edges of the field. The vertical part of this cross is offset towards the hoist side."
+    },
+    "name": {
+      "common": "Denmark",
+      "official": "Kingdom of Denmark",
+      "nativeName": {
+        "dan": { "official": "Kongeriget Danmark", "common": "Danmark" }
+      }
+    },
+    "cca3": "DNK",
+    "capital": ["Copenhagen"],
+    "altSpellings": [
+      "DK",
+      "Danmark",
+      "Kingdom of Denmark",
+      "Kongeriget Danmark"
+    ],
+    "region": "Europe",
+    "population": 5831404
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/kz.png",
+      "svg": "https://flagcdn.com/kz.svg",
+      "alt": "The flag of Kazakhstan has a turquoise field, at the center of which is a gold sun with thirty-two rays above a soaring golden steppe eagle. A thin vertical band displays a national ornamental pattern — koshkar-muiz — in gold near the hoist end."
+    },
+    "name": {
+      "common": "Kazakhstan",
+      "official": "Republic of Kazakhstan",
+      "nativeName": {
+        "kaz": { "official": "Қазақстан Республикасы", "common": "Қазақстан" },
+        "rus": { "official": "Республика Казахстан", "common": "Казахстан" }
+      }
+    },
+    "cca3": "KAZ",
+    "capital": ["Astana"],
+    "altSpellings": [
+      "KZ",
+      "Qazaqstan",
+      "Казахстан",
+      "Republic of Kazakhstan",
+      "Қазақстан Республикасы",
+      "Qazaqstan Respublïkası",
+      "Республика Казахстан",
+      "Respublika Kazakhstan"
+    ],
+    "region": "Asia",
+    "population": 18754440
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/vu.png",
+      "svg": "https://flagcdn.com/vu.svg",
+      "alt": "The flag of Vanuatu is composed of two equal horizontal bands of red and green, with a black isosceles triangle superimposed on the hoist side of the field. This triangle has its base on the hoist end, spans about two-fifth the width of the field and is enclosed on its sides by the arms of a thin black-edged yellow horizontally oriented Y-shaped band which extends along the boundary of the red and green bands to the fly end of the field. A yellow boar's tusk encircling two yellow crossed namele leaves is centered in the triangle."
+    },
+    "name": {
+      "common": "Vanuatu",
+      "official": "Republic of Vanuatu",
+      "nativeName": {
+        "bis": { "official": "Ripablik blong Vanuatu", "common": "Vanuatu" },
+        "eng": { "official": "Republic of Vanuatu", "common": "Vanuatu" },
+        "fra": { "official": "République de Vanuatu", "common": "Vanuatu" }
+      }
+    },
+    "cca3": "VUT",
+    "capital": ["Port Vila"],
+    "altSpellings": [
+      "VU",
+      "Republic of Vanuatu",
+      "Ripablik blong Vanuatu",
+      "République de Vanuatu"
+    ],
+    "region": "Oceania",
+    "population": 307150
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/ua.png",
+      "svg": "https://flagcdn.com/ua.svg",
+      "alt": "The flag of Ukraine is composed of two equal horizontal bands of blue and yellow."
+    },
+    "name": {
+      "common": "Ukraine",
+      "official": "Ukraine",
+      "nativeName": { "ukr": { "official": "Україна", "common": "Україна" } }
+    },
+    "cca3": "UKR",
+    "capital": ["Kyiv"],
+    "altSpellings": ["UA", "Ukrayina"],
+    "region": "Europe",
+    "population": 44134693
+  }
+]
