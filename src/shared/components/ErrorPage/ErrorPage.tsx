@@ -1,16 +1,27 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
-import { ErrorPageProps } from "./ErrorPage.type";
+import { useGoTo } from "@hooks/useGoTo";
+
+import { errorPageStyles } from "./ErrorPage.style";
 
 const text = "Oops! Something went wrong.";
+const description = "Hit reload or click the button to go back home.";
+const buttonText = "Go home";
 
-const ErrorPage = ({ button, description, title }: ErrorPageProps) => {
+const ErrorPage = () => {
+  const { goToHome } = useGoTo();
+
   return (
-    <main>
-      <h1>{title || text}</h1>
-      {description && <p>{description}</p>}
-      {button && <Button onClick={button.onClick}>{button.text}</Button>}
-    </main>
+    <Box component={"main"} sx={errorPageStyles.container}>
+      <Box component={"h1"} sx={errorPageStyles.title}>
+        {text}
+      </Box>
+      <p>{description}</p>
+
+      <Button variant="outlined" onClick={goToHome}>
+        {buttonText}
+      </Button>
+    </Box>
   );
 };
 

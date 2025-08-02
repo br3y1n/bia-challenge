@@ -31,6 +31,13 @@ const countryStyles = createStyles({
     boxShadow: "0px 0px 6px 2px #00000047",
     objectFit: "cover",
   },
+  imgSkeleton: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+  },
   descriptionContainer: {
     display: { xs: "block", md: "grid" },
     gridTemplateColumns: "1fr 1fr",
@@ -44,7 +51,15 @@ const countryStyles = createStyles({
   name: {
     mb: { xs: "20px", md: "28px" },
   },
+  nameSkeleton: {
+    mb: { xs: "20px", md: "28px" },
+    width: "150px",
+    height: "30px",
+  },
   description: {
+    mb: "8px",
+  },
+  descriptionSkeleton: {
     mb: "8px",
   },
   countriesContainer: {
@@ -52,14 +67,28 @@ const countryStyles = createStyles({
     gap: "20px",
   },
   countriesTitle: {
+    fontSize: { xs: "16px" },
     whiteSpace: "nowrap",
     fontWeight: "800",
-    mb: { xs: "15px", md: "none" },
+    mb: { xs: "15px", md: "0" },
+  },
+  countriesTitleSkeleton: {
+    mt: "3px",
+    mb: { xs: "15px", md: "0" },
+    width: "150px",
+    height: "25px",
   },
   countryButton: {
     fontSize: "14px",
     py: "2px",
     m: "3px",
+  },
+  countryButtonSkeleton: {
+    py: "2px",
+    m: "3px",
+    width: "70px",
+    display: "inline-block",
+    height: "30px",
   },
   rightContainer: {
     alignSelf: "center",

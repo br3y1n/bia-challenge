@@ -48,9 +48,19 @@ export class EnvFileHandler {
     return line;
   }
 
-  static validateExampleValue(key: string, value?: string): string {
+  static validateExampleValue(
+    key: string,
+    value?: string,
+    args: Record<string, string> = {},
+  ): string {
     const config = ENVS_CONFIG[key];
     if (!config) return value || "";
+
+    const argValue = args[config.flagName];
+
+    if (argValue && config.options.includes(argValue)) {
+      return argValue;
+    }
 
     if (value && config.options.includes(value)) {
       return value;

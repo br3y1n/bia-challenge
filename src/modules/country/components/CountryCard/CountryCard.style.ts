@@ -2,15 +2,9 @@ import { createStyles } from "@utils/create-styles";
 
 const countryCardStyles = createStyles({
   title: {
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
     fontWeight: "800",
   },
   subtitle: {
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
     fontWeight: "800",
     fontSize: "12px",
     mb: "20px",

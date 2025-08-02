@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn  && yarn build
+RUN yarn  && yarn sync:envs --withCountryTarget=api && yarn build
 
 EXPOSE 3000
 

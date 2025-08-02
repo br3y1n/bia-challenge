@@ -32,18 +32,35 @@ class EnvSynchronizer {
     const exampleContent = fs.readFileSync(this.envExamplePath, "utf-8");
     let exampleEnv = EnvFileHandler.parse(exampleContent);
 
-    const updatedExampleLines = exampleEnv.lines.map((line) => {
-      if (!line.key) return line.original;
+    const updatedExampleLinesValid: string[] = [];
+    const updatedExampleLines: string[] = [];
+
+    exampleEnv.lines.forEach((line) => {
+      if (!line.key) {
+        updatedExampleLines.push(line.original);
+        updatedExampleLinesValid.push(line.original);
+        return;
+      }
 
       const validValue = EnvFileHandler.validateExampleValue(
         line.key,
         line.value,
       );
 
-      return EnvFileHandler.generateLine(line.key, validValue);
+      updatedExampleLinesValid.push(
+        EnvFileHandler.generateLine(line.key, validValue),
+      );
+
+      const value = EnvFileHandler.validateExampleValue(
+        line.key,
+        line.value,
+        this.args,
+      );
+
+      updatedExampleLines.push(EnvFileHandler.generateLine(line.key, value));
     });
 
-    fs.writeFileSync(this.envExamplePath, updatedExampleLines.join("\n"));
+    fs.writeFileSync(this.envExamplePath, updatedExampleLinesValid.join("\n"));
 
     console.log("✓ .env.example validated and updated");
     return EnvFileHandler.parse(updatedExampleLines.join("\n"));

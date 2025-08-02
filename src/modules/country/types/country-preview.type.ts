@@ -5,4 +5,10 @@ type CountryPreview = Pick<
   "population" | "id" | "region" | "capital" | "flag"
 > & { name: { common: string; match: string } };
 
-export type { CountryPreview };
+interface CountriesPreviewResponse {
+  countries: CountryPreview[];
+  total: number;
+  pages: number;
+}
+
+export type { CountryPreview, CountriesPreviewResponse };

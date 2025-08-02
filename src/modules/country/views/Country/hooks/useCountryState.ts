@@ -5,16 +5,11 @@ import { CountryRepositoryFactory } from "@country/repositories/country-reposito
 import { useGoTo } from "@hooks/useGoTo";
 
 const useCountryState = (id: string) => {
-  const { goToCountries, goToCountry } = useGoTo();
   const repository = useMemo(() => new CountryRepositoryFactory(), []);
+  const { goToCountries, goToCountry } = useGoTo();
+  const { data: country, isLoading, error } = useCountry(repository, id);
 
-  const {
-    data: country,
-    isLoading: isLoading,
-    error: isError,
-  } = useCountry(repository, id);
-
-  return { goToCountry, goToCountries, country, isError, isLoading };
+  return { goToCountry, goToCountries, country, isError: !!error, isLoading };
 };
 
 export { useCountryState };

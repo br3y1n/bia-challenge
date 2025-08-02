@@ -34,7 +34,7 @@ class CountryRepositoryFactory implements CountryRepository {
     )();
   };
 
-  getCountries = (filters: TCountryFilters) =>
+  getCountries = (filters?: TCountryFilters) =>
     this._getRepository(
       configEnvs.COUNTRY_TARGET as CountryImplementationEnum,
     ).getCountries(filters);
@@ -43,6 +43,11 @@ class CountryRepositoryFactory implements CountryRepository {
     this._getRepository(
       configEnvs.COUNTRY_TARGET as CountryImplementationEnum,
     ).getCountry(id);
+
+  getRegions = () =>
+    this._getRepository(
+      configEnvs.COUNTRY_TARGET as CountryImplementationEnum,
+    ).getRegions();
 }
 
 export { CountryRepositoryFactory };

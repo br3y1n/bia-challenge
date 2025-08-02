@@ -6,12 +6,17 @@ import {
   InputAdornment,
   InputLabel,
   MenuItem,
+  Pagination,
   Select,
   TextField,
 } from "@mui/material";
 import { Controller } from "react-hook-form";
 
-import { CountryCards } from "@country/components/CountryCards";
+import {
+  CountryCards,
+  CountryCardsSkeleton,
+} from "@country/components/CountryCards";
+import { renderByStatus } from "@wrappers/render-by-status.wrapper";
 
 import { countriesStyles } from "./Countries.style";
 import { useCountriesState } from "./hooks/useCountriesState";
@@ -25,6 +30,10 @@ const Countries = () => {
     countries,
     regions,
     control,
+    isLoadingCountries,
+    isErrorCountries,
+    isLoadingRegions,
+    pages,
   } = useCountriesState();
 
   return (
@@ -67,9 +76,11 @@ const Countries = () => {
               <InputLabel htmlFor="region">Filter by Region</InputLabel>
 
               <Select {...field} label="Filter by Region" id="region">
-                <MenuItem value={""}>None</MenuItem>
+                <MenuItem value={""}>
+                  {isLoadingRegions ? "Loading..." : "None"}
+                </MenuItem>
 
-                {regions.map((region, index) => (
+                {regions?.map((region, index) => (
                   <MenuItem value={region} key={index}>
                     {region}
                   </MenuItem>
@@ -80,7 +91,37 @@ const Countries = () => {
         />
       </Box>
 
-      <CountryCards cards={countries ?? []} />
+      {renderByStatus(
+        () => (
+          <>
+            <CountryCards cards={countries ?? []} />
+
+            {pages! > 0 && (
+              <Controller
+                control={control}
+                name="page"
+                render={({ field: { value, onChange } }) => (
+                  <Pagination
+                    count={pages}
+                    page={value}
+                    onChange={(_, page) => {
+                      onChange(page);
+                    }}
+                    siblingCount={0}
+                  />
+                )}
+              />
+            )}
+          </>
+        ),
+        {
+          loader: {
+            is: isLoadingCountries,
+            render: () => <CountryCardsSkeleton />,
+          },
+          error: { is: isErrorCountries },
+        },
+      )}
     </>
   );
 };

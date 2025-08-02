@@ -4,10 +4,10 @@ import { Country } from "@country/views/Country";
 import { createApiClient } from "@infrastructure/api/api-client.factory";
 
 const generateStaticParams = async () => {
-  const apiRepository = new CountryApiRepository(
+  const countryApiRepository = new CountryApiRepository(
     createApiClient(configEnvs.COUNTRY_API),
   );
-  const countries = await apiRepository.getCountries({ name: "", region: "" });
+  const { countries } = await countryApiRepository.getCountries();
 
   return countries.map(({ id }) => ({ id }));
 };

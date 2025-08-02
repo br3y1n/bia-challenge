@@ -4,6 +4,7 @@ import {
   TCountriesApiResponse,
 } from "@country/adapters/countries.adapter.type";
 import { countryAdapter } from "@country/adapters/country.adapter";
+import { regionsAdapter } from "@country/adapters/regions.adapter";
 import mockCountries from "@country/assets/countries.json";
 import { TCountryFilters } from "@country/types/country-filters.type";
 import { catchApiErrors } from "@infrastructure/api/wrappers/catch-api-errors";
@@ -16,9 +17,9 @@ class CountryMockRepository implements CountryRepository {
     mockCountries as unknown as TCountriesApiResponse;
 
   getCountries = delayApiMock(
-    catchApiErrors(async (filters: TCountryFilters) => {
-      const name = filters.name ?? "";
-      const filteredCountries = this._mockCountries.filter(
+    catchApiErrors((filters?: TCountryFilters) => {
+      const name = filters?.name ?? "";
+      const countries = this._mockCountries.filter(
         (country) =>
           country.name.common
             .toLocaleLowerCase()
@@ -28,7 +29,7 @@ class CountryMockRepository implements CountryRepository {
             .includes(name.toLocaleLowerCase()),
       );
 
-      return countriesAdapter(filteredCountries);
+      return Promise.resolve(countriesAdapter(countries, filters));
     }),
   );
 
@@ -38,16 +39,20 @@ class CountryMockRepository implements CountryRepository {
         ({ cca3 }) => cca3 === id,
       );
 
-      if (!countryResponse) throw Error("No found");
+      if (!countryResponse) throw Error("Not found");
 
       return await countryAdapter(countryResponse, this._getBorderCountry);
     }),
   );
 
+  getRegions = delayApiMock(
+    catchApiErrors(() => Promise.resolve(regionsAdapter(this._mockCountries))),
+  );
+
   _getBorderCountry = (id: string): Promise<ICountryApiResponse> => {
     const countryResponse = this._mockCountries.find(({ cca3 }) => cca3 === id);
 
-    if (!countryResponse) throw Error("No found");
+    if (!countryResponse) throw Error("Not found");
 
     return Promise.resolve(countryResponse);
   };

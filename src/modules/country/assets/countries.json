@@ -9,10 +9,20 @@
       "common": "Moldova",
       "official": "Republic of Moldova",
       "nativeName": {
-        "ron": { "official": "Republica Moldova", "common": "Moldova" }
+        "ron": {
+          "official": "Republica Moldova",
+          "common": "Moldova"
+        }
       }
     },
+    "tld": [".md"],
     "cca3": "MDA",
+    "currencies": {
+      "MDL": {
+        "name": "Moldovan leu",
+        "symbol": "L"
+      }
+    },
     "capital": ["Chișinău"],
     "altSpellings": [
       "MD",
@@ -21,6 +31,11 @@
       "Republica Moldova"
     ],
     "region": "Europe",
+    "subregion": "Eastern Europe",
+    "languages": {
+      "ron": "Romanian"
+    },
+    "borders": ["UKR"],
     "population": 2617820
   },
   {
@@ -33,12 +48,28 @@
       "common": "Comoros",
       "official": "Union of the Comoros",
       "nativeName": {
-        "ara": { "official": "الاتحاد القمري", "common": "القمر‎" },
-        "fra": { "official": "Union des Comores", "common": "Comores" },
-        "zdj": { "official": "Udzima wa Komori", "common": "Komori" }
+        "ara": {
+          "official": "الاتحاد القمري",
+          "common": "القمر‎"
+        },
+        "fra": {
+          "official": "Union des Comores",
+          "common": "Comores"
+        },
+        "zdj": {
+          "official": "Udzima wa Komori",
+          "common": "Komori"
+        }
       }
     },
+    "tld": [".km"],
     "cca3": "COM",
+    "currencies": {
+      "KMF": {
+        "name": "Comorian franc",
+        "symbol": "Fr"
+      }
+    },
     "capital": ["Moroni"],
     "altSpellings": [
       "KM",
@@ -48,6 +79,13 @@
       "al-Ittiḥād al-Qumurī"
     ],
     "region": "Africa",
+    "subregion": "Eastern Africa",
+    "languages": {
+      "ara": "Arabic",
+      "fra": "French",
+      "zdj": "Comorian"
+    },
+    "borders": [],
     "population": 869595
   },
   {
@@ -60,14 +98,33 @@
       "common": "Malaysia",
       "official": "Malaysia",
       "nativeName": {
-        "eng": { "official": "Malaysia", "common": "Malaysia" },
-        "msa": { "official": "مليسيا", "common": "مليسيا" }
+        "eng": {
+          "official": "Malaysia",
+          "common": "Malaysia"
+        },
+        "msa": {
+          "official": "مليسيا",
+          "common": "مليسيا"
+        }
       }
     },
+    "tld": [".my"],
     "cca3": "MYS",
+    "currencies": {
+      "MYR": {
+        "name": "Malaysian ringgit",
+        "symbol": "RM"
+      }
+    },
     "capital": ["Kuala Lumpur"],
     "altSpellings": ["MY"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "languages": {
+      "eng": "English",
+      "msa": "Malay"
+    },
+    "borders": [],
     "population": 32365998
   },
   {
@@ -86,10 +143,22 @@
         }
       }
     },
+    "tld": [".dz", "الجزائر."],
     "cca3": "DZA",
+    "currencies": {
+      "DZD": {
+        "name": "Algerian dinar",
+        "symbol": "د.ج"
+      }
+    },
     "capital": ["Algiers"],
     "altSpellings": ["DZ", "Dzayer", "Algérie"],
     "region": "Africa",
+    "subregion": "Northern Africa",
+    "languages": {
+      "ara": "Arabic"
+    },
+    "borders": [],
     "population": 44700000
   },
   {
@@ -112,7 +181,14 @@
         }
       }
     },
+    "tld": [".nf"],
     "cca3": "NFK",
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
     "capital": ["Kingston"],
     "altSpellings": [
       "NF",
@@ -120,6 +196,12 @@
       "Teratri of Norf'k Ailen"
     ],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "languages": {
+      "eng": "English",
+      "pih": "Norfuk"
+    },
+    "borders": [],
     "population": 2302
   },
   {
@@ -132,13 +214,28 @@
       "common": "Slovenia",
       "official": "Republic of Slovenia",
       "nativeName": {
-        "slv": { "official": "Republika Slovenija", "common": "Slovenija" }
+        "slv": {
+          "official": "Republika Slovenija",
+          "common": "Slovenija"
+        }
       }
     },
+    "tld": [".si"],
     "cca3": "SVN",
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
     "capital": ["Ljubljana"],
     "altSpellings": ["SI", "Republic of Slovenia", "Republika Slovenija"],
     "region": "Europe",
+    "subregion": "Central Europe",
+    "languages": {
+      "slv": "Slovene"
+    },
+    "borders": ["AUT"],
     "population": 2100126
   },
   {
@@ -157,10 +254,22 @@
         }
       }
     },
+    "tld": [".gy"],
     "cca3": "GUY",
+    "currencies": {
+      "GYD": {
+        "name": "Guyanese dollar",
+        "symbol": "$"
+      }
+    },
     "capital": ["Georgetown"],
     "altSpellings": ["GY", "Co-operative Republic of Guyana"],
     "region": "Americas",
+    "subregion": "South America",
+    "languages": {
+      "eng": "English"
+    },
+    "borders": [],
     "population": 786559
   },
   {
@@ -179,10 +288,22 @@
         }
       }
     },
+    "tld": [".gs"],
     "cca3": "SGS",
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      }
+    },
     "capital": ["King Edward Point"],
     "altSpellings": ["GS", "South Georgia and the South Sandwich Islands"],
     "region": "Antarctic",
+    "subregion": "",
+    "languages": {
+      "eng": "English"
+    },
+    "borders": [],
     "population": 30
   },
   {
@@ -201,10 +322,22 @@
         }
       }
     },
+    "tld": [".cx"],
     "cca3": "CXR",
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
     "capital": ["Flying Fish Cove"],
     "altSpellings": ["CX", "Territory of Christmas Island"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "languages": {
+      "eng": "English"
+    },
+    "borders": [],
     "population": 2072
   },
   {
@@ -217,13 +350,28 @@
       "common": "France",
       "official": "French Republic",
       "nativeName": {
-        "fra": { "official": "République française", "common": "France" }
+        "fra": {
+          "official": "République française",
+          "common": "France"
+        }
       }
     },
+    "tld": [".fr"],
     "cca3": "FRA",
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
     "capital": ["Paris"],
     "altSpellings": ["FR", "French Republic", "République française"],
     "region": "Europe",
+    "subregion": "Western Europe",
+    "languages": {
+      "fra": "French"
+    },
+    "borders": ["AND"],
     "population": 67391582
   },
   {
@@ -236,10 +384,20 @@
       "common": "Denmark",
       "official": "Kingdom of Denmark",
       "nativeName": {
-        "dan": { "official": "Kongeriget Danmark", "common": "Danmark" }
+        "dan": {
+          "official": "Kongeriget Danmark",
+          "common": "Danmark"
+        }
       }
     },
+    "tld": [".dk"],
     "cca3": "DNK",
+    "currencies": {
+      "DKK": {
+        "name": "Danish krone",
+        "symbol": "kr"
+      }
+    },
     "capital": ["Copenhagen"],
     "altSpellings": [
       "DK",
@@ -248,6 +406,11 @@
       "Kongeriget Danmark"
     ],
     "region": "Europe",
+    "subregion": "Northern Europe",
+    "languages": {
+      "dan": "Danish"
+    },
+    "borders": [],
     "population": 5831404
   },
   {
@@ -260,11 +423,24 @@
       "common": "Kazakhstan",
       "official": "Republic of Kazakhstan",
       "nativeName": {
-        "kaz": { "official": "Қазақстан Республикасы", "common": "Қазақстан" },
-        "rus": { "official": "Республика Казахстан", "common": "Казахстан" }
+        "kaz": {
+          "official": "Қазақстан Республикасы",
+          "common": "Қазақстан"
+        },
+        "rus": {
+          "official": "Республика Казахстан",
+          "common": "Казахстан"
+        }
       }
     },
+    "tld": [".kz", ".қаз"],
     "cca3": "KAZ",
+    "currencies": {
+      "KZT": {
+        "name": "Kazakhstani tenge",
+        "symbol": "₸"
+      }
+    },
     "capital": ["Astana"],
     "altSpellings": [
       "KZ",
@@ -277,6 +453,12 @@
       "Respublika Kazakhstan"
     ],
     "region": "Asia",
+    "subregion": "Central Asia",
+    "languages": {
+      "kaz": "Kazakh",
+      "rus": "Russian"
+    },
+    "borders": [],
     "population": 18754440
   },
   {
@@ -289,12 +471,28 @@
       "common": "Vanuatu",
       "official": "Republic of Vanuatu",
       "nativeName": {
-        "bis": { "official": "Ripablik blong Vanuatu", "common": "Vanuatu" },
-        "eng": { "official": "Republic of Vanuatu", "common": "Vanuatu" },
-        "fra": { "official": "République de Vanuatu", "common": "Vanuatu" }
+        "bis": {
+          "official": "Ripablik blong Vanuatu",
+          "common": "Vanuatu"
+        },
+        "eng": {
+          "official": "Republic of Vanuatu",
+          "common": "Vanuatu"
+        },
+        "fra": {
+          "official": "République de Vanuatu",
+          "common": "Vanuatu"
+        }
       }
     },
+    "tld": [".vu"],
     "cca3": "VUT",
+    "currencies": {
+      "VUV": {
+        "name": "Vanuatu vatu",
+        "symbol": "Vt"
+      }
+    },
     "capital": ["Port Vila"],
     "altSpellings": [
       "VU",
@@ -303,6 +501,13 @@
       "République de Vanuatu"
     ],
     "region": "Oceania",
+    "subregion": "Melanesia",
+    "languages": {
+      "bis": "Bislama",
+      "eng": "English",
+      "fra": "French"
+    },
+    "borders": [],
     "population": 307150
   },
   {
@@ -314,12 +519,251 @@
     "name": {
       "common": "Ukraine",
       "official": "Ukraine",
-      "nativeName": { "ukr": { "official": "Україна", "common": "Україна" } }
+      "nativeName": {
+        "ukr": {
+          "official": "Україна",
+          "common": "Україна"
+        }
+      }
     },
+    "tld": [".ua", ".укр"],
     "cca3": "UKR",
+    "currencies": {
+      "UAH": {
+        "name": "Ukrainian hryvnia",
+        "symbol": "₴"
+      }
+    },
     "capital": ["Kyiv"],
     "altSpellings": ["UA", "Ukrayina"],
     "region": "Europe",
+    "subregion": "Eastern Europe",
+    "languages": {
+      "ukr": "Ukrainian"
+    },
+    "borders": ["MDA"],
     "population": 44134693
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/li.png",
+      "svg": "https://flagcdn.com/li.svg",
+      "alt": "The flag of Liechtenstein is composed of two equal horizontal bands of blue and red, with a golden-yellow crown on the hoist side of the blue band."
+    },
+    "name": {
+      "common": "Liechtenstein",
+      "official": "Principality of Liechtenstein",
+      "nativeName": {
+        "deu": {
+          "official": "Fürstentum Liechtenstein",
+          "common": "Liechtenstein"
+        }
+      }
+    },
+    "tld": [".li"],
+    "cca3": "LIE",
+    "currencies": {
+      "CHF": {
+        "name": "Swiss franc",
+        "symbol": "Fr"
+      }
+    },
+    "capital": ["Vaduz"],
+    "altSpellings": [
+      "LI",
+      "Principality of Liechtenstein",
+      "Fürstentum Liechtenstein"
+    ],
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "languages": {
+      "deu": "German"
+    },
+    "borders": ["AUT"],
+    "population": 38137
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/at.png",
+      "svg": "https://flagcdn.com/at.svg",
+      "alt": "The flag of Austria is composed of three equal horizontal bands of red, white and red."
+    },
+    "name": {
+      "common": "Austria",
+      "official": "Republic of Austria",
+      "nativeName": {
+        "bar": {
+          "official": "Republik Österreich",
+          "common": "Österreich"
+        }
+      }
+    },
+    "tld": [".at"],
+    "cca3": "AUT",
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "capital": ["Vienna"],
+    "altSpellings": ["AT", "Osterreich", "Oesterreich"],
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "languages": {
+      "deu": "German"
+    },
+    "borders": ["LIE", "SVN"],
+    "population": 8917205
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/kw.png",
+      "svg": "https://flagcdn.com/kw.svg",
+      "alt": "The flag of Kuwait is composed of three equal horizontal bands of green, white and red, with a black trapezium superimposed on the hoist side of the field. This trapezium has its base on the hoist end and spans about one-fourth the width of the field."
+    },
+    "name": {
+      "common": "Kuwait",
+      "official": "State of Kuwait",
+      "nativeName": {
+        "ara": {
+          "official": "دولة الكويت",
+          "common": "الكويت"
+        }
+      }
+    },
+    "tld": [".kw"],
+    "cca3": "KWT",
+    "currencies": {
+      "KWD": {
+        "name": "Kuwaiti dinar",
+        "symbol": "د.ك"
+      }
+    },
+    "capital": ["Kuwait City"],
+    "altSpellings": ["KW", "State of Kuwait", "Dawlat al-Kuwait"],
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "languages": {
+      "ara": "Arabic"
+    },
+    "borders": [],
+    "population": 4270563
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/ad.png",
+      "svg": "https://flagcdn.com/ad.svg",
+      "alt": "The flag of Andorra features three equal vertical bands of blue, yellow and red, with the coat of arms of Andorra centered in the yellow band."
+    },
+    "name": {
+      "common": "Andorra",
+      "official": "Principality of Andorra",
+      "nativeName": {
+        "cat": {
+          "official": "Principat d'Andorra",
+          "common": "Andorra"
+        }
+      }
+    },
+    "tld": [".ad"],
+    "cca3": "AND",
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "capital": ["Andorra la Vella"],
+    "altSpellings": ["AD", "Principality of Andorra", "Principat d'Andorra"],
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "languages": {
+      "cat": "Catalan"
+    },
+    "borders": ["FRA"],
+    "population": 77265
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/bw.png",
+      "svg": "https://flagcdn.com/bw.svg",
+      "alt": "The flag of Botswana has a light blue field with a white-edged black horizontal band across its center."
+    },
+    "name": {
+      "common": "Botswana",
+      "official": "Republic of Botswana",
+      "nativeName": {
+        "eng": {
+          "official": "Republic of Botswana",
+          "common": "Botswana"
+        },
+        "tsn": {
+          "official": "Lefatshe la Botswana",
+          "common": "Botswana"
+        }
+      }
+    },
+    "tld": [".bw"],
+    "cca3": "BWA",
+    "currencies": {
+      "BWP": {
+        "name": "Botswana pula",
+        "symbol": "P"
+      }
+    },
+    "capital": ["Gaborone"],
+    "altSpellings": ["BW", "Republic of Botswana", "Lefatshe la Botswana"],
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "languages": {
+      "eng": "English",
+      "tsn": "Tswana"
+    },
+    "borders": [],
+    "population": 2351625
+  },
+  {
+    "flags": {
+      "png": "https://flagcdn.com/w320/fo.png",
+      "svg": "https://flagcdn.com/fo.svg",
+      "alt": ""
+    },
+    "name": {
+      "common": "Faroe Islands",
+      "official": "Faroe Islands",
+      "nativeName": {
+        "dan": {
+          "official": "Færøerne",
+          "common": "Færøerne"
+        },
+        "fao": {
+          "official": "Føroyar",
+          "common": "Føroyar"
+        }
+      }
+    },
+    "tld": [".fo"],
+    "cca3": "FRO",
+    "currencies": {
+      "DKK": {
+        "name": "Danish krone",
+        "symbol": "kr"
+      },
+      "FOK": {
+        "name": "Faroese króna",
+        "symbol": "kr"
+      }
+    },
+    "capital": ["Tórshavn"],
+    "altSpellings": ["FO", "Føroyar", "Færøerne"],
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "languages": {
+      "dan": "Danish",
+      "fao": "Faroese"
+    },
+    "borders": ["COL"],
+    "population": 48865
   }
 ]
